@@ -1,0 +1,22 @@
+﻿@model  IEnumerable<DoctorsItemViewModel> 
+ @using HomePage.Models
+
+<section id="doctors">
+        <h2 class="animate__animated animate__fadeInUp">فريق الأطباء</h2>
+        <div class="doctor-cards container">
+            
+               @foreach(var item in Model)
+            {
+                <div class="card animate__animated @(item.IsActive"active") animate__fadeInLeft">
+                    <img src = " @item.urlImag"  alt="د. أحمد علي">
+                <h3>@item.Title</h3>
+                <p>@item.subTitle</p>
+                <p>@item.UrlImag</p>
+            </div>
+            }
+          
+           
+        </div>
+    </section> 
+
+

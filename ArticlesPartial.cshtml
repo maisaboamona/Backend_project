@@ -1,0 +1,35 @@
+﻿   @model  IEnumerable<ArticleItemViewModel> 
+ @using HomePage.Models
+
+<section id="articels">
+        <h2 class="animate__animated animate__fadeInUp">المقالات</h2>
+     
+        <div class="doctor-cards container">
+              @foreach(var item in Model)
+        {
+             <div class="card animate__animated @(item.IsActive"active") animate__fadeInUp animate__delay-1s">
+                 <img src="@item.UrlImg" alt="مقال عن الصحة النفسية">
+                <h3>@item.Title</h3>
+                <p>@item.subTitle</p>
+                <a href="  articels details.html" class="btn-main" style="padding: 8px 16px; font-size: 14px; margin-top: 10px;">قراءة
+                    المزيد</a>
+            </div>
+        }
+            <div class="card animate__animated animate__fadeInLeft">
+               
+                    alt="مقال عن الصحة النفسية">
+                <h3>كيف تتغلب على التوتر؟</h3>
+                <p>نصائح عملية للتعامل مع الضغوط اليومية</p>
+                <a href="articels details.html" class="btn-main" style="padding: 8px 16px; font-size: 14px; margin-top: 10px;">قراءة
+                    المزيد</a>
+            </div>
+            <div class="card animate__animated animate__fadeInRight">
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?q=80&w=2070&auto=format&fit=crop"
+                    alt="مقال عن العلاج النفسي">
+                <h3>أساليب العلاج الحديثة</h3>
+                <p>أحدث الطرق في العلاج النفسي المعرفي</p>
+                <a href="articels details.html" class="btn-main" style="padding: 8px 16px; font-size: 14px; margin-top: 10px;">قراءة
+                    المزيد</a>
+            </div>
+        </div>
+    </section>

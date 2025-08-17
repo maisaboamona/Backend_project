@@ -1,0 +1,17 @@
+﻿ @model  IEnumerable<servicesItem> 
+ @using HomePage.Models
+
+
+    <section id="services">
+        <h2 class="animate__animated animate__fadeInUp">@item.Title</h2>
+        <div class="cards container">
+            @foreach(var item in Model)
+        {
+             <div class="card animate__animated @(item.IsActive"active") animate__fadeInUp animate__delay-1s">
+                <i class="@item.icon"></i>
+                <h3>@item.Title</h3>
+                <p>@item.subTitle</p>
+            </div>
+        }
+        </div>
+    </section>
